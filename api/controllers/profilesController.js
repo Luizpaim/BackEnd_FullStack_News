@@ -1,4 +1,4 @@
-const services = require('../../service');
+const services = require('../../services');
 const profilesServices = services.profilesService;
 const utilResponse = require('../../crosscuting/response');
 

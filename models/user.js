@@ -1,20 +1,25 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"); // importar biblioteca para usar ela 
 
 const userAuth = new mongoose.Schema({
-    _id: mongoose.isValidObjectId,
-    name: String
-});
-
-const profile = new mongoose.Schema({
     _id: mongoose.ObjectId,
     name: String
 });
 
-//Model
+const profile = new mongoose.Schema({ //criação de perfil para usuario objeto representa profile
 
-const user = new mongoose.Schema({
-    name: {
-        type: String,
+    _id: mongoose.ObjectId, // informado pelo id     
+    name: String // o tipo string 
+});
+
+//Model class objeto usuario
+
+
+const user = new mongoose.Schema({ // configurando metodo para criar objeto que representa nossa collection na base
+    // objeto em formato json é um array
+
+    name: { //cada propiedade da nossa base 
+
+        type: String, //tipo de dado que será armazenado
         required: [true, 'O nome é obrigatório !']
     },
     lastname: {
@@ -39,6 +44,6 @@ const user = new mongoose.Schema({
     },
 
 
-}, { collection: 'users' });
+}, { collection: 'users' }); // indicando a collection que ele representa 
 
-module.exports - mongoose.model('users', user);
+module.exports = mongoose.model('users', user); // exportando classe para usar informações dentro da aplicação

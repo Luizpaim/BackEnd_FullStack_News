@@ -1,4 +1,4 @@
-const services = require('../../service');
+const services = require('../../services');
 const usersServices = services.usersService;
 const bcrypt = require('../../crosscuting/bcrypt');
 const jwt = require('jsonwebtoken');

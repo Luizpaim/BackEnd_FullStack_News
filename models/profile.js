@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const userAth = new mongoose.Schema({
-    _id: mongoose.isValidObjectId,
+const userAuth = new mongoose.Schema({
+    _id: mongoose.ObjectId,
     name: String
 });
 
 const profile = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'O nome é obrigatório !']
+        required: [true, 'O Profile é obrigatório !']
     },
     createdAt: Date,
     updatedAt: Date,

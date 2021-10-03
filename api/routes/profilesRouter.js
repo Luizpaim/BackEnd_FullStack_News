@@ -6,7 +6,7 @@ const profilescontroller = require("../controllers/profilesController");
 
 router.get('', verifyJWT, profilescontroller.find);
 router.get('/:index', verifyJWT, profilescontroller.findById);
-router.post('/:index', verifyJWT, profilescontroller.create);
+router.post('', verifyJWT, profilescontroller.create);
 router.put('/:index', verifyJWT, profilescontroller.update);
 router.delete('/:index', verifyJWT, profilescontroller.destroy);
 
